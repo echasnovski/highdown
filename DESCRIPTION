@@ -1,0 +1,10 @@
+Package: highdown
+Title: Code Highlight for pkgdown Site
+Version: 0.0.0.9000
+Authors@R: person("Evgeni", "Chasnovski", email = "evgeni.chasnovski@gmail.com",
+    role = c("aut", "cre"))
+Description: Customize code highlighting for pkgdown site.
+Depends: R (>= 3.4.2)
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
