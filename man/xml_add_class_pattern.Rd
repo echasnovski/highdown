@@ -19,7 +19,7 @@ xml_add_class_pattern(xpath, pattern, new_class, path = "docs")
 Full file paths of modified files (invisibly).
 }
 \description{
-Function for processing all html files in specific folder (recursively) by
-adding certain class to those nodes which satisfy XPATH expression and with
-text matching regular expression.
+Function for processing (rewrite) all html files in specific folder
+(recursively) by adding certain class to those nodes which satisfy XPATH
+expression and with text matching regular expression.
 }

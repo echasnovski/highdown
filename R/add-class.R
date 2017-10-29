@@ -1,8 +1,8 @@
 #' Add class to certain XML nodes
 #'
-#' Function for processing all html files in specific folder (recursively) by
-#' adding certain class to those nodes which satisfy XPATH expression and with
-#' text matching regular expression.
+#' Function for processing (rewrite) all html files in specific folder
+#' (recursively) by adding certain class to those nodes which satisfy XPATH
+#' expression and with text matching regular expression.
 #'
 #' @param xpath A string containing an xpath (1.0) expression.
 #' @param pattern Regular expression for nodes' text of interest.
