@@ -29,7 +29,7 @@ At the moment, the most flexible way of customizing code highlighting is with us
 -   Build site with `pkgdown::build_site()`.
 -   Run `highdown::tweak_ref_pages()` (with working directory being package root) to enable code highlighting on Reference pages. **Note** that as for 2017-10-27 this still can cause incorrect highlighting if some actual code is placed just after comment.
 
-### Without highlight.js
+### With adding tag class
 
 If, for some reason, using custom JavaScript is not appropriate, there is a solution via `<span>` tags class modification. The idea is to find certain nodes in HTML page with text matching certain regular expression (say, `"%>%"` for pipe operator) and add certain class to it (say, "pp"). This can make styling with custom CSS possible.
 
