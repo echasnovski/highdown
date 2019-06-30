@@ -8,6 +8,8 @@ Depends: R (>= 3.4.2)
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports: xml2
+Imports: 
+    xml2,
+    magrittr
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1
