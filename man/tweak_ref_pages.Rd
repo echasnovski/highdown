@@ -7,7 +7,7 @@
 tweak_ref_pages()
 }
 \value{
-Full file paths of modified files (invisibly).
+Full file paths of (possibly) modified files (invisibly).
 }
 \description{
 Function to tweak all Reference pages in \code{pkgdown} site. For now it adds

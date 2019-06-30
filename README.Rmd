@@ -14,7 +14,13 @@ knitr::opts_chunk$set(
 
 # highdown
 
-Customize code highlighting for [pkgdown](https://hadley.github.io/pkgdown/index.html) site.
+Customize code highlighting for [pkgdown](https://r-lib.github.io/pkgdown/index.html) site.
+
+For me, the most typical usage is to run this code after `pkgdown::build_site()`:
+
+```{r typical-usage, eval = FALSE}
+highdown::tweak_after_pkgdown()
+```
 
 ## Installation
 

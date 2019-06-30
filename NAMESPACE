@@ -2,6 +2,8 @@
 
 export("%>%")
 export(high_pipe)
+export(tweak_after_pkgdown)
+export(tweak_articles_toc)
 export(tweak_ref_pages)
 export(xml_add_class_pattern)
 importFrom(magrittr,"%>%")
