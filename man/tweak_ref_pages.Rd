@@ -10,8 +10,8 @@ tweak_ref_pages()
 Full file paths of modified files (invisibly).
 }
 \description{
-Function to tweak all Reference pages in `pkgdown` site. For now it adds
+Function to tweak all Reference pages in \code{pkgdown} site. For now it adds
 child node <code class = "r"> to all <pre> nodes to make highlight.js work.
-__Note__ that this function should be run with working directory being
-package root. Also __note__ that it will rewrite pages.
+\strong{Note} that this function should be run with working directory being
+package root. Also \strong{note} that it will rewrite pages.
 }
