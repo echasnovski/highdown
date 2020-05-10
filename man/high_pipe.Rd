@@ -16,5 +16,5 @@ Full file paths of modified files (invisibly).
 }
 \description{
 Function to process all html files at certain path by adding class "pp" to
-"<span>" nodes which contain "%>%" inside text.
+"\<span\>" nodes which contain "\%>\%" inside text.
 }
