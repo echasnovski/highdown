@@ -1,41 +1,54 @@
 # tweak_after_pkgdown -----------------------------------------------------
 #' Tweak site after `pkgdown::build_site()`
 #'
-#' This consecutively runs [tweak_ref_pages()] and [tweak_articles_toc].
+#' For now this is effectively an alias to `tweak_code_blocks()`. This is
+#' because `pkgdown` 0.1.5 introduced some important changes:
+#' - Syntax highlighting process is now the same in index, reference, and
+#' article pages.
+#' - Tables of contents in sidebars now use `bootstrap-toc`, which is good
+#' enough without extra tweaking.
 #'
 #' @return `tweak_after_pkgdown()` returns `TRUE` invisibly after success.
 #'
 #' @export
 tweak_after_pkgdown <- function() {
-  tweak_ref_pages()
-  tweak_articles_toc()
+  tweak_code_blocks()
 
   invisible(TRUE)
 }
 
 
-# tweak_ref_pages ---------------------------------------------------------
-#' Tweak Reference pages
+# tweak_code_blocks -------------------------------------------------------
+#' Tweak Code Blocks
 #'
-#' Function to tweak all Reference pages in `pkgdown` site. For now it adds
-#' child node <code class = "r"> to all <pre> nodes to make highlight.js work.
-#' __Note__ that this function should be run with working directory being
-#' package root. Also __note__ that it will rewrite pages.
+#' Function to tweak code blocks in all relevant `pkgdown` pages: index,
+#' reference, and articles. It adds child node \<code class = "r"\> to all
+#' \<pre\> nodes to make highlight.js work. __Note__ that this function should
+#' be run with working directory being package root. Also __note__ that it will
+#' rewrite pages.
 #'
 #' @return Full file paths of (possibly) modified files (invisibly).
 #'
 #' @export
-tweak_ref_pages <- function() {
-  ref_files <- list.files(
-    path = "docs/reference/",
+tweak_code_blocks <- function() {
+  files <- c(
+    "docs/index.html",
+    html_files("docs/reference/"),
+    html_files("docs/articles/")
+  )
+
+  lapply(files, add_code_node)
+
+  invisible(files)
+}
+
+html_files <- function(path) {
+  list.files(
+    path = path,
     pattern = "\\.html",
     recursive = TRUE,
     full.names = TRUE
   )
-
-  lapply(ref_files, add_code_node)
-
-  invisible(ref_files)
 }
 
 add_code_node <- function(x) {

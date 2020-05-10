@@ -19,9 +19,9 @@ hack which exploits how 'pkgdown' handles TOC with headers of several orders.
 \details{
 \strong{Notes}:
 \itemize{
-\item This is often used with \code{padding-left: 20px;} (move elements to the right
+\item This is often used with \verb{padding-left: 20px;} (move elements to the right
 by 20 pixels) CSS property of \code{toc-lev2} class in CSS file of package site
-(usually 'pkgdown/extra.css'); \code{padding-left: 40px;} for \code{toc-lev3}, etc.
+(usually 'pkgdown/extra.css'); \verb{padding-left: 40px;} for \code{toc-lev3}, etc.
 \item To enable having elements of different header order, use "depth: 3" (or
 more) property of "toc" element in '_pkgdown.yml'.
 }

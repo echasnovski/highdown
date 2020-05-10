@@ -10,5 +10,12 @@ tweak_after_pkgdown()
 \code{tweak_after_pkgdown()} returns \code{TRUE} invisibly after success.
 }
 \description{
-This consecutively runs \code{\link[=tweak_ref_pages]{tweak_ref_pages()}} and \link{tweak_articles_toc}.
+For now this is effectively an alias to \code{tweak_code_blocks()}. This is
+because \code{pkgdown} 0.1.5 introduced some important changes:
+\itemize{
+\item Syntax highlighting process is now the same in index, reference, and
+article pages.
+\item Tables of contents in sidebars now use \code{bootstrap-toc}, which is good
+enough without extra tweaking.
+}
 }
